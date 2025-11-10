@@ -442,7 +442,7 @@ For template improvements, create a PR to this repository.
 
 ## 📄 License
 
-MIT
+Apache-2.0 license
 
 ---
 
