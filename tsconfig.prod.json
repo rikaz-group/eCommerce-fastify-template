@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Production: Only .js files, no source maps or declarations
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+  }
+}

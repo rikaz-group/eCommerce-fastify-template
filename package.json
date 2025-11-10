@@ -1,0 +1,50 @@
+{
+  "name": "fastify-microservice-template",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "TypeScript Fastify microservice template for e-commerce platform",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:tsc\" \"npm:dev:fastify\"",
+    "dev:tsc": "tsc --watch",
+    "dev:fastify": "fastify start -w -l info -P dist/app.js",
+    "build": "tsc -p tsconfig.prod.json",
+    "build:dev": "tsc",
+    "start": "fastify start -l info dist/app.js",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "fastify",
+    "typescript",
+    "microservice",
+    "template",
+    "esm"
+  ],
+  "author": "Rikaz Group",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/sensible": "^6.0.0",
+    "@types/stack-trace": "^0.0.33",
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.4.0",
+    "fastify-plugin": "^5.0.0",
+    "pino-pretty": "^11.0.0",
+    "stack-trace": "^1.0.0-pre2",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vitest/ui": "^4.0.8",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.8"
+  }
+}
